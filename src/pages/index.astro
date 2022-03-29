@@ -12,9 +12,9 @@ interface MarkdownFrontmatter {
 // You can write any JavaScript/TypeScript that you'd like here.
 // It will run during the build, but never in the browser.
 // All variables are available to use in the HTML template below.
-let title = 'Defi Town Hall | Never miss town halls again';
-let description = 'A community managed archive of DeFi town hall meeting notes and transcriptions.';
-let permalink = 'https://example.com/';
+let title = 'Defi Townhall | Never miss DeFi town halls again';
+let description = 'A community managed archive of town hall meeting notes and transcriptions from across the DeFi universe.';
+let permalink = 'https://defitownhall.com/';
 let headline = 'Never miss DeFi town halls again'
 
 // Data Fetching: List all Markdown posts in the repo.
@@ -54,6 +54,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
+				text-align: center;
 				width: 100%;
 				padding-bottom: 4rem;
 				margin-bottom: 2rem;
@@ -62,6 +63,12 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
 
 			.intro > * {
 				margin: 0;
+			}
+
+			.intro p {
+				max-width: 30rem;
+				margin-inline: auto;
+				margin-top: 1rem;
 			}
 
 			.latest {
