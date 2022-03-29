@@ -1,0 +1,74 @@
+---
+export interface Props {
+	post: any;
+}
+
+const { post } = Astro.props;
+---
+
+<article class="post-preview">
+	<header>
+		<div class="project">
+			<img src={post.logo} alt=""><span>{post.project}</span>
+		</div>
+		<a href={post.url}><h1 class="title">{post.title}</h1></a>
+		<div>
+			<span class="publish-date">{`Published ${post.publishDate} by`}</span>
+			<a class="author" href="">{`@${post.author}`}</a>
+		</div>
+	</header>
+	<p>{post.description}</p>
+	<a href={post.url}>Read more</a>
+</article>
+
+<style>
+	.content :global(main > * + *) {
+		margin-top: 1rem;
+	}
+
+	.post-preview {
+		padding: 2rem;
+		margin-bottom: 2rem;
+		border: 3px solid var(--theme-divider);
+		border-radius: 1rem;
+	}
+
+	header {
+		align-items: flex-start;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-bottom: 2rem;
+		text-align: left;
+	}
+
+	.project {
+		display: flex;
+		align-items: center;
+		color: var(--theme-text-light)
+	}
+
+	.project img {
+		max-width: 1.5rem;
+		margin-inline: auto;
+		margin-right: .2em;
+	}
+
+	.title,
+	.author,
+	.publish-date {
+		margin: 0;
+	}
+
+	.publish-date,
+	.author {
+		font-size: 1rem;
+		color: var(--theme-text-lighter);
+	}
+
+	.title {
+		font-size: 2.25rem;
+		font-weight: 700;
+		color: var(--theme-text);
+	}
+</style>
