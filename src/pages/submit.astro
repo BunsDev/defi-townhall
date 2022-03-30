@@ -1,0 +1,33 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import BlogHeader from '../components/BlogHeader.astro';
+import SubmitForm from '../components/SubmitForm.astro';
+
+let title = 'Defi Townhall | Never miss DeFi town halls again';
+let description = 'A community managed archive of town hall meeting notes and transcriptions from across the DeFi universe.';
+let permalink = 'https://defitownhall.com/';
+// let headline = 'Never miss DeFi town halls again'
+---
+
+<html lang="en">
+    <head>
+        <BaseHead {title} {description} {permalink} />
+        <style>
+            .form-container {
+                margin-inline: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <BlogHeader />
+        <div class="wrapper">
+            <div class="form-container">
+                <SubmitForm />
+            </div>
+        </div>
+    </body>
+</html>

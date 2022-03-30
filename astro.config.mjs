@@ -5,6 +5,6 @@ import preact from '@astrojs/preact';
 export default defineConfig({
 	integrations: [preact()],
 	buildOptions: {
-		site: 'https://example.com/',
+		site: 'https://defitownhall.com/',
 	},
 });

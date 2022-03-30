@@ -3,27 +3,20 @@
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogPostPreview from '../components/BlogPostPreview.astro';
+import SearchBar from '../components/SearchBar.astro';
 
 interface MarkdownFrontmatter {
 	publishDate: number;
 }
 
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
 let title = 'Defi Townhall | Never miss DeFi town halls again';
 let description = 'A community managed archive of town hall meeting notes and transcriptions from across the DeFi universe.';
 let permalink = 'https://defitownhall.com/';
 let headline = 'Never miss DeFi town halls again'
 
 // Data Fetching: List all Markdown posts in the repo.
-
 let allPosts = await Astro.fetchContent('./posts/*.md');
 allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
 ---
 
 <html lang="en">
@@ -58,7 +51,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
 				width: 100%;
 				padding-bottom: 4rem;
 				margin-bottom: 2rem;
-				border-bottom: 4px solid var(--theme-divider);
+				/* border-bottom: 4px solid var(--theme-divider); */
 			}
 
 			.intro > * {
@@ -71,9 +64,19 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
 				margin-top: 1rem;
 			}
 
+			.intro a {
+				margin-top: 1rem;
+				font-weight: bold;
+			}
+
 			.latest {
 				font-size: 2.5rem;
 				font-weight: 700;
+			}
+
+			.search-bar {
+				display: flex;
+
 			}
 		</style>
 	</head>
@@ -85,7 +88,9 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
 				<section class="intro">
 					<h1 class="latest">{headline}</h1>
 					<p>{description}</p>
+					<a href="/submit">Submit Notes</a>
 				</section>
+				<SearchBar />
 				<section aria-label="Blog post list">
 					{allPosts.map((p) => <BlogPostPreview post={p} />)}
 				</section>
