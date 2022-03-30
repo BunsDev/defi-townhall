@@ -4,6 +4,7 @@ import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogPostPreview from '../components/BlogPostPreview.astro';
 import SearchBar from '../components/SearchBar.astro';
+import Footer from '../components/Footer.astro';
 
 interface MarkdownFrontmatter {
 	publishDate: number;
@@ -96,5 +97,6 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
 				</section>
 			</main>
 		</div>
+		<Footer />
 	</body>
 </html>
