@@ -10,10 +10,10 @@ interface MarkdownFrontmatter {
 	publishDate: number;
 }
 
-let title = 'Defi Townhall | Never miss DeFi town halls again';
-let description = 'A community managed archive of town hall meeting notes and transcriptions from across the DeFi galaxy.';
+let title = 'Defi Townhall | Never miss community meetings again';
+let description = 'A community managed archive town hall, AMA, and community meeting notes and transcriptions from across the DeFi galaxy.';
 let permalink = 'https://defitownhall.com/';
-let headline = 'Never miss DeFi town halls again'
+let headline = 'Never miss community meetings again'
 
 // Data Fetching: List all Markdown posts in the repo.
 let allPosts = await Astro.fetchContent('./posts/*.md');
@@ -60,7 +60,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
 			}
 
 			.intro p {
-				max-width: 30rem;
+				max-width: 40rem;
 				margin-inline: auto;
 				margin-top: 1rem;
 			}
