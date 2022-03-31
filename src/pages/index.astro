@@ -44,14 +44,13 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
 			}
 
 			.intro {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				text-align: center;
+				display: grid;
+				place-items: center;
+				gap: 2rem;
 				width: 100%;
 				padding-bottom: 4rem;
 				margin-bottom: 2rem;
+				text-align: center;
 				/* border-bottom: 4px solid var(--theme-divider); */
 			}
 
@@ -62,22 +61,16 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
 			.intro p {
 				max-width: 40rem;
 				margin-inline: auto;
-				margin-top: 1rem;
 			}
 
-			.intro a {
-				margin-top: 1rem;
-				font-weight: bold;
+			.intro span {
+				color: var(--color-purple);
+				margin-bottom: -1rem;
 			}
 
 			.latest {
 				font-size: 2.5rem;
 				font-weight: 700;
-			}
-
-			.search-bar {
-				display: flex;
-
 			}
 		</style>
 	</head>
@@ -89,7 +82,8 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
 				<section class="intro">
 					<h1 class="latest">{headline}</h1>
 					<p>{description}</p>
-					<a href="https://forms.gle/X3ngi2WbyTbGrr4f6" target="_blank">Submit Notes</a>
+					<span>Help us share alfalfa and earn $20!</span>
+					<a class="btn-primary mt-1" href="https://forms.gle/X3ngi2WbyTbGrr4f6" target="_blank">Earn $20 by Submitting Notes</a>
 				</section>
 				<SearchBar />
 				<section aria-label="Blog post list">

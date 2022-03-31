@@ -16,6 +16,7 @@ input {
     border-color: var(--color-purple);
     
     text-align: center;
+    letter-spacing: var(--letter-spacing-1);
 	font-size: clamp(
 		1rem,
 		0.4626rem + 1.0309vw + var(--user-font-scale),
@@ -23,7 +24,7 @@ input {
 	);
 }
 
-input:focus, input:hover, input:active {
+input:hover, input:active, input:focus {
     outline: 3px solid;
     outline-offset: -3px;
     outline-color: var(--color-purple);

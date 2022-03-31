@@ -30,6 +30,11 @@
 	--color-red-rgb: 255, 22, 57;
 	--color-yellow: #ffbe2d;
 	--color-yellow-rgb: 255, 190, 45;
+
+	--m-1: 1rem;
+	--m-2: 2rem;
+
+	--letter-spacing-1: 0.05em;
 }
 
 :root {
@@ -281,4 +286,37 @@ blockquote .source {
 	font-weight: 500;
 	color: var(--color);
 	font-size: 1rem;
+}
+
+.btn-primary {
+	background-color: var(--color-purple);
+	color: var(--color-white);
+	padding: 1rem 2rem;
+	border: none;
+	border-radius: 1rem;
+	cursor: pointer;
+	font-weight: bold;
+	letter-spacing: var(--letter-spacing-1);
+}
+
+.btn-primary:focus {
+	outline: 2px solid blue;
+	border-radius: none;
+	text-decoration: none;
+	letter-spacing: var(--letter-spacing-1);
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+	text-decoration: none;
+	background-color: var(--color-white);
+	outline: 2px solid var(--color-purple);
+	outline-offset: -2px;
+	color: var(--color-purple);
+	font-weight: bold;
+	letter-spacing: var(--letter-spacing-1);
+}
+
+.mt-1 {
+	margin-top: var(--m-2);
 }
