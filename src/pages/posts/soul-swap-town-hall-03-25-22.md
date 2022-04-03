@@ -2,11 +2,12 @@
 setup: |
     import Layout from '../../layouts/BlogPost.astro'
 project: Soul Swap
-title: Notes | Soul Swap Town Hall 03.25.22
+title: Soul Swap Town Hall 03.25.22
 publishDate: 27 Mar 2022
 author: difool0x
+twitterUrl: https://twitter.com/difool0x
 description: Record breaking protocol owned liquidity and tons of new features and updates! Get the download on this week's Soul Swap town hall!
-logo: /assets/logos/soulswap-logo.png
+logo: /assets/logos/soul-swap.png
 ---
 
 ### What are all the tokens in the SoulSwap ecosystem?

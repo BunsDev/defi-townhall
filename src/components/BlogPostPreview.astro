@@ -14,7 +14,7 @@ const { post } = Astro.props;
 		<a href={post.url}><h1 class="title">{post.title}</h1></a>
 		<div>
 			<span class="publish-date">{`Published ${post.publishDate} by`}</span>
-			<a class="author" href="">{`@${post.author}`}</a>
+			<a class="author" href={post.twitterUrl} target="_blank">{`@${post.author}`}</a>
 		</div>
 	</header>
 	<p>{post.description}</p>

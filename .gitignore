@@ -18,3 +18,7 @@ yarn-error.log*
 
 # editor
 .vscode/
+
+# misc.
+branding/
+notes/
