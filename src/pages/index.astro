@@ -13,7 +13,7 @@ interface MarkdownFrontmatter {
 let title = 'Defi Townhall | Never miss community meetings again';
 let description = 'A community sourced archive of town hall, AMA, and community meeting notes from across the DeFi galaxy.';
 let permalink = 'https://defitownhall.com/';
-let headline = 'Never miss community meetings again'
+let headline = 'Make alpha more accessible'
 
 // Data Fetching: List all Markdown posts in the repo.
 let allPosts = await Astro.fetchContent('./posts/*.md');
@@ -82,7 +82,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
 				<section class="intro">
 					<h1 class="latest">{headline}</h1>
 					<p>{description}</p>
-					<span>Help us share alfalfa and earn $20! 💰</span>
+					<span>Help make alpha more accessible and earn $20! 💰</span>
 					<a class="btn-primary mt-1" href="https://forms.gle/X3ngi2WbyTbGrr4f6" target="_blank">Earn $20 by Submitting Notes</a>
 				</section>
 				<SearchBar />
