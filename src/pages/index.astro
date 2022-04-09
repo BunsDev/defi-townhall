@@ -3,7 +3,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogPostPreview from '../components/BlogPostPreview.astro';
-import SearchBar from '../components/SearchBar.astro';
+// import SearchBar from '../components/SearchBar.astro';
 import Footer from '../components/Footer.astro';
 
 interface MarkdownFrontmatter {
@@ -85,7 +85,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
 					<span>Help make alpha more accessible and earn $20! 💰</span>
 					<a class="btn-primary mt-1" href="https://forms.gle/X3ngi2WbyTbGrr4f6" target="_blank">Earn $20 by Submitting Notes</a>
 				</section>
-				<SearchBar />
+				<!-- <SearchBar /> -->
 				<section aria-label="Blog post list">
 					{allPosts.map((p) => <BlogPostPreview post={p} />)}
 				</section>
