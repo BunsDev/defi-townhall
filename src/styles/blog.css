@@ -7,16 +7,19 @@
 	--color-white: #fff;
 	--color-black: #000014;
 
-	--color-gray-50: #f9fafb;
-	--color-gray-100: #f3f4f6;
-	--color-gray-200: #e5e7eb;
-	--color-gray-300: #d1d5db;
-	--color-gray-400: #9ca3af;
-	--color-gray-500: #6b7280;
-	--color-gray-600: #4b5563;
-	--color-gray-700: #374151;
-	--color-gray-800: #1f2937;
-	--color-gray-900: #111827;
+	--color-gray-50: hsl(210, 20%, 98%);
+	--color-gray-100: hsl(220, 14%, 96%);
+	--color-gray-200: hsl(220, 13%, 91%);
+	--color-gray-300: hsl(216, 12%, 84%);
+	--color-gray-400: hsl(218, 11%, 65%);
+	--color-gray-500: hsl(220, 9%, 46%);
+	--color-gray-600: hsl(215, 14%, 34%);
+	--color-gray-700: hsl(217, 19%, 27%);
+	--color-gray-800: hsl(215, 28%, 17%);
+	--color-gray-900: hsl(221, 39%, 11%);
+
+	--color-purple-200: hsl(282, 79%, 80%);
+	--color-purple-400: hsl(282, 79%, 54%);
 
 	--color-blue: #3894ff;
 	--color-blue-rgb: 56, 148, 255;
@@ -24,29 +27,36 @@
 	--color-green-rgb: 23, 192, 131;
 	--color-orange: #ff5d01;
 	--color-orange-rgb: 255, 93, 1;
-	--color-purple: #882de7;
-	--color-purple-rgb: 136, 45, 231;
+	--color-purple-400-rgb: 136, 45, 231;
 	--color-red: #ff1639;
 	--color-red-rgb: 255, 22, 57;
 	--color-yellow: #ffbe2d;
 	--color-yellow-rgb: 255, 190, 45;
 
+	--color-primary-400: var(--color-purple-400);
+
 	--m-1: 1rem;
 	--m-2: 2rem;
 
+	--p-4: 1rem;
+
 	--letter-spacing-1: 0.05em;
+
+	/* gradients */
+	--intro-gradient: hsla(221, 39%, 11%, 0.1), var(--color-gray-900);
 }
 
 :root {
 	color-scheme: light;
-	--theme-accent: var(--color-purple);
-	--theme-accent-rgb: var(--color-purple-rgb);
+	--theme-accent: var(--color-purple-400);
+	--theme-accent-rgb: var(--color-purple-400-rgb);
 	--theme-accent-opacity: 0.1;
 	--theme-divider: var(--color-gray-100);
 	--theme-text: var(--color-gray-800);
 	--theme-text-light: var(--color-gray-600);
 	--theme-text-lighter: var(--color-gray-400);
-	--theme-bg: var(--color-white);
+	--theme-text-dark: var(--color-gray-900);
+	--theme-bg: var(--color-gray-900);
 	--theme-bg-offset: var(--color-gray-100);
 	--theme-bg-accent: rgba(
 		var(--theme-accent-rgb),
@@ -59,7 +69,7 @@
 
 body {
 	background: var(--theme-bg);
-	color: var(--theme-text);
+	color: var(--theme-text-lighter);
 }
 
 :root.theme-dark {
@@ -104,9 +114,9 @@ body {
 	font-family: var(--font-body);
 	font-size: 1rem;
 	font-size: clamp(
-		0.875rem,
+		0.9rem,
 		0.4626rem + 1.0309vw + var(--user-font-scale),
-		1.125rem
+		1.2rem
 	);
 	line-height: 1.625;
 	height: 100vh;
@@ -127,9 +137,10 @@ nav ul {
 
 /* Typography */
 :is(h1, h2, h3, h4, h5, h6) {
-	margin-bottom: 1.38rem;
-	font-weight: 400;
+	/* margin-bottom: 1.38rem; */
+	font-weight: bold;
 	line-height: 1.3;
+	color: var(--color-white);
 }
 
 :is(h1, h2) {
@@ -162,7 +173,7 @@ h5 {
 }
 
 p {
-	color: var(--theme-text-light);
+	color: var(--theme-text-lighter);
 }
 
 small,
@@ -171,7 +182,7 @@ small,
 }
 
 a {
-	color: var(--theme-accent);
+	color: var(--color-purple-200);
 	font-weight: 400;
 	text-underline-offset: 0.08em;
 	text-decoration: none;
@@ -289,7 +300,7 @@ blockquote .source {
 }
 
 .btn-primary {
-	background-color: var(--color-purple);
+	background-color: var(--color-purple-400);
 	color: var(--color-white);
 	padding: 1rem 2rem;
 	border: none;
@@ -310,9 +321,9 @@ blockquote .source {
 .btn-primary:active {
 	text-decoration: none;
 	background-color: var(--color-white);
-	outline: 2px solid var(--color-purple);
+	outline: 2px solid var(--color-purple-400);
 	outline-offset: -2px;
-	color: var(--color-purple);
+	color: var(--color-purple-400);
 	font-weight: bold;
 	letter-spacing: var(--letter-spacing-1);
 }

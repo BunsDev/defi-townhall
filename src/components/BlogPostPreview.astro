@@ -17,7 +17,7 @@ const { post } = Astro.props;
 			<a class="author" href={post.twitterUrl} target="_blank">{`@${post.author}`}</a>
 		</div>
 	</header>
-	<p>{post.description}</p>
+	<p class="description">{post.description}</p>
 	<a href={post.url}>Read more</a>
 </article>
 
@@ -27,10 +27,11 @@ const { post } = Astro.props;
 	}
 
 	.post-preview {
-		padding: 2rem;
-		margin-bottom: 2rem;
-		border: 3px solid var(--theme-divider);
+		border: 3px solid var(--color-primary-400);
 		border-radius: 1rem;
+		background-color:var(--color-white);
+		padding: var(--p-4);
+		margin-bottom: 2rem;
 	}
 
 	header {
@@ -70,5 +71,18 @@ const { post } = Astro.props;
 		font-size: 2.25rem;
 		font-weight: 700;
 		color: var(--theme-text);
+	}
+
+	.author {
+		font-weight: normal;
+	}
+
+	.description {
+		color: var(--theme-text-dark);
+	}
+
+	a {
+		color: var(--color-primary-400);
+		font-weight: bold;
 	}
 </style>

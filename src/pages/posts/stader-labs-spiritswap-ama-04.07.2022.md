@@ -10,9 +10,10 @@ description: Get the alpha from the latest AMA with Stader Labs and SpiritSwap! 
 logo: /assets/logos/stader-labs.jpg
 ---
 
-Today @Spirit_Swap hosted an AMA with @staderlabs just before they launch on #FTM!
+<p>Today @Spirit_Swap hosted an AMA with @staderlabs just before they launch on #FTM!</p>
 
-You can find the recording <a href="https://cdn.discordapp.com/attachments/960937480461373460/961700303835631646/SpiritSwap_X_Stader_Labs_AMA.mp3" target="_blank">here</a>.
+<p>You can find the recording <a href="https://cdn.discordapp.com/attachments/960937480461373460/961700303835631646/SpiritSwap_X_Stader_Labs_AMA.mp3" target="_blank">here</a>.
+</p>
 
 #### Links
 
