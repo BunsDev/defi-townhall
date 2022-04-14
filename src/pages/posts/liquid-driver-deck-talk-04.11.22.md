@@ -3,7 +3,7 @@ setup: |
     import Layout from '../../layouts/BlogPost.astro'
 project: Liquid Driver
 title: Liquid Driver Deck Talk 04.11.22
-publishDate: Apr 14 2022
+publishDate: 13 Apr 2022
 author: JacksWiths
 twitterUrl: https://twitter.com/JacksWiths
 description: Get the alpha from this week's Liquid Driver Deck Talk. DeBank voting, Shadow DAO, partnership updates and more! Notes provided by community member JacksWiths.
