@@ -3,7 +3,7 @@ setup: |
     import Layout from '../../layouts/BlogPost.astro'
 project: Byte Masons
 title: Byte Masons AMA & the fBEETS Wars 04.12.22
-publishDate: 19 Apr 2022
+publishDate: 18 Apr 2022
 author: JacksWiths
 twitterUrl: https://twitter.com/JacksWiths
 description: Before the locking mechanism for fBEETS should is released, the @ByteMasons held an AMA to discuss their current strategy, and talk about the future. Coverage by JacksWiths.
